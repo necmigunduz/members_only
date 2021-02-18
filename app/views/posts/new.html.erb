@@ -1,2 +1,12 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div>
+<%= form_tag(posts_path,method: 'post')  do %>
+  <%= label_tag(:title, "Title:") %>
+  <%= text_field_tag(:title) %>
+
+  <%= label_tag(:body, "Body:") %>
+  <%= text_field_tag(:body) %>
+
+   
+  <%= submit_tag("Submit") %>
+<% end %>
+</div>
