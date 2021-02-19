@@ -11,31 +11,35 @@
   </head>
 
   <body>
+  <div >
   <% if flash[:notice] %>
-        <div class='notification is-primary global-notification'>
-         <p class="notice"><%= notice %></p>
+        <div style="color:red; border-style: solid; border-color: red;">
+         <p><%= notice %></p>
         </div>
      <%end%>
 
      <% if flash[:alert] %>
-        <div class='notification is-danger global-notification'>
-         <p class="alert"><%= alert %></p>
+        <div style=" color:red; border-style: solid; border-color: red;">
+         <p><%= alert %></p>
         </div>
      <%end%>
+     </div>
      
+    <div style="float: right;">
      <% if user_signed_in? %>
-              <p>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-              </p>
+        
+            <div style="display: inline; padding-right:15px;"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div>
+              
             <% else %>
-            <p>
-              <%= link_to 'Sign In', new_user_session_path%>
-            </p>
-						<p>
-              <%= link_to 'Sign Up', new_user_registration_path%>
-            </p>
+           
+            <div style="display: inline; padding-right:15px;">  <%= link_to 'Sign In', new_user_session_path%></div>
+            
+						
+            <div style="display: inline; padding-right:15px;"><%= link_to 'Sign Up', new_user_registration_path%></div>
+        
       <% end %>
-
+    
+ </div><br/><br/><br/>
 
 
     <%= yield %>

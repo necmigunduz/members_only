@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.all.order('created_at ASC')
     @post = Post.new
   end
 
