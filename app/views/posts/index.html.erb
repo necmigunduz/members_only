@@ -1,1 +1,4 @@
 <%= render 'all_posts' %>
+<% if user_signed_in? %>
+<%= render 'new_post' %>
+<% end %>
