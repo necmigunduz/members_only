@@ -1,7 +1,7 @@
 <%= form_with model: @post do |form| %>
   <%= form.label :title, "Title" %>
-  <%= form.text_field :title, placeholder: "Enter your username here"%>
-  <%= form.label :body, "Body" %>
-  <%= form.text_field :body, placeholder: "example@email.com"%>
+  <%= form.text_field :title, placeholder: "Enter your title here"%>
+  <%= form.label :body, "Message" %>
+  <%= form.text_field :body, placeholder: "Enter your message here"%>
   <%= form.submit "Submit" %>
 <% end %> 
