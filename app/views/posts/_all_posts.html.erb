@@ -1,0 +1,5 @@
+<% @posts.each do |post|  %>
+    <h1><%= post.title %></h1><br/>
+    <p><%= post.body %></p><br/>
+    <p><%= post.user.email %></p>
+<% end %>   
