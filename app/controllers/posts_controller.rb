@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: %i[ new create ]
-  
+  before_action :authenticate_user!, only: %i[new create]
+
   def new
     @post = Post.new
   end
 
   def create
     @post = current_user.posts.build(post_params)
-    
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to root_path, notice: 'Post was successfully created.' }
@@ -29,5 +31,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
-
 end
