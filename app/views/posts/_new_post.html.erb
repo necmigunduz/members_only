@@ -1,0 +1,9 @@
+<div style="border-style:solid; border-color:blue; width:40%; text-align:center; margin-left:400px;">
+<%= form_with model: @post do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title, placeholder: "Enter your title here"%><br/><br/>
+  <%= form.label :body, "Message" %>
+  <%= form.text_field :body, placeholder: "Enter your message here"%><br/><br/>
+  <%= form.submit "Submit" %>
+<% end %> 
+</div>

@@ -1,0 +1,23 @@
+
+   <table cellpadding="5" cellspacing="5" style="width:100%; border-style:solid; border-color:green;">
+   <tr style="color:green;">
+    <th>Title</th>
+    <th>Message</th>
+    <th>User</th>
+   </tr>
+   <% @posts.each do |post|  %>
+   <tr>
+    <th><%= post.title %></th>
+    <th><%= post.body %></th>
+    <th>
+    <% if user_signed_in?%>
+    <%= post.user.email %>
+      <% else %>
+      Anonymous
+      <% end %>
+    <% end %>
+    </th>
+   </tr>
+   </table>
+    
+       
