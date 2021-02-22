@@ -2,8 +2,8 @@
 A member-ship website where members post their messages. The messages are visible to everyone. However, the authors of the messages are visible only to members
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-![](app/assets/images/Screenshot from 2021-02-22 11-32-33.png)
-![](app/assets/images/Screenshot from 2021-02-22 11-32-53.png)
+![](../images/pic1.png)
+![](../images/pic2.png)
 
 
 ## Built With
